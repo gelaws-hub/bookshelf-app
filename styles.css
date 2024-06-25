@@ -1,0 +1,186 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+header {
+  background-color: #300074;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Main Content Styling */
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+button {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  align-self: flex-start;
+}
+
+button {
+  background-color: #6200ea;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3700b3;
+}
+
+/* Book Lists Styling */
+section h2 {
+  border-bottom: 2px solid #6200ea;
+  padding-bottom: 0.5rem;
+}
+
+#incompleteBookList,
+#completeBookList {
+  margin-top: 1rem;
+}
+
+[data-testid="bookItem"] {
+  background-color: #f1f1f1;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+[data-testid="bookItem"]:hover {
+  background-color: #e0e0e0;
+}
+
+[data-testid="bookItem"] h3 {
+  margin-top: 0;
+}
+
+[data-testid="bookItem"] div {
+  margin-top: 1rem;
+}
+
+[data-testid="bookItem"] button {
+  margin-right: 0.5rem;
+}
+
+/* Book Elements : */
+.book-item {
+  background-color: #ffffff;
+  padding: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.book-item:hover {
+  background-color: #e0e0e0;
+}
+
+.book-title {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+}
+
+.book-author,
+.book-year {
+  margin: 0;
+}
+
+.book-action {
+  margin-top: 1rem;
+}
+
+.toggle-button,
+.delete-button {
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-button:hover,
+.delete-button:hover {
+  background-color: #6200ea;
+  color: #fff;
+}
+
+.toggle-button {
+  background-color: #00bcd4;
+}
+
+.delete-button {
+  background-color: #f44336;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  main {
+    padding: 0.5rem;
+  }
+
+  form {
+    gap: 0.5rem;
+  }
+
+  button {
+    width: 100%;
+    margin: 0.25rem 0;
+  }
+
+  [data-testid="bookItem"] div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  [data-testid="bookItem"] button {
+    margin: 0.25rem 0;
+  }
+}
