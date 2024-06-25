@@ -8,7 +8,7 @@
     <!-- Impor script kamu di sini -->
     <!-- Lampirkan `defer` jika pemanggilan dilakukan dalam <head> -->
     <script defer src="main.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
@@ -21,15 +21,30 @@
         <form id="bookForm" data-testid="bookForm">
           <div>
             <label for="bookFormTitle">Judul</label>
-            <input id="bookFormTitle" type="text" required data-testid="bookFormTitleInput" />
+            <input
+              id="bookFormTitle"
+              type="text"
+              required
+              data-testid="bookFormTitleInput"
+            />
           </div>
           <div>
             <label for="bookFormAuthor">Penulis</label>
-            <input id="bookFormAuthor" type="text" required data-testid="bookFormAuthorInput" />
+            <input
+              id="bookFormAuthor"
+              type="text"
+              required
+              data-testid="bookFormAuthorInput"
+            />
           </div>
           <div>
             <label for="bookFormYear">Tahun</label>
-            <input id="bookFormYear" type="number" required data-testid="bookFormYearInput" />
+            <input
+              id="bookFormYear"
+              type="number"
+              required
+              data-testid="bookFormYearInput"
+            />
           </div>
           <div>
             <label for="bookFormIsComplete">Selesai dibaca</label>
@@ -39,7 +54,11 @@
               data-testid="bookFormIsCompleteCheckbox"
             />
           </div>
-          <button id="bookFormSubmit" type="submit" data-testid="bookFormSubmitButton">
+          <button
+            id="bookFormSubmit"
+            type="submit"
+            data-testid="bookFormSubmitButton"
+          >
             Masukkan Buku ke rak <span>Belum selesai dibaca</span>
           </button>
         </form>
@@ -49,8 +68,16 @@
         <h2>Cari Buku</h2>
         <form id="searchBook" data-testid="searchBookForm">
           <label for="searchBookTitle">Judul</label>
-          <input id="searchBookTitle" type="text" data-testid="searchBookFormTitleInput" />
-          <button id="searchSubmit" type="submit" data-testid="searchBookFormSubmitButton">
+          <input
+            id="searchBookTitle"
+            type="text"
+            data-testid="searchBookFormTitleInput"
+          />
+          <button
+            id="searchSubmit"
+            type="submit"
+            data-testid="searchBookFormSubmitButton"
+          >
             Cari
           </button>
         </form>
@@ -64,12 +91,18 @@
             Ini adalah struktur HTML untuk masing-masing buku.
             Pastikan susunan elemen beserta atribut data-testid menyesuaikan seperti contoh ini.
           -->
-          <div data-bookid="123123123" data-testid="bookItem" class="data-bookid">
+          <div
+            data-bookid="123123123"
+            data-testid="bookItem"
+            class="data-bookid"
+          >
             <h3 data-testid="bookItemTitle">Judul Buku 1</h3>
             <p data-testid="bookItemAuthor">Penulis: Penulis Buku 1</p>
             <p data-testid="bookItemYear">Tahun: 2030</p>
             <div>
-              <button data-testid="bookItemIsCompleteButton">Selesai dibaca</button>
+              <button data-testid="bookItemIsCompleteButton">
+                Selesai dibaca
+              </button>
               <button data-testid="bookItemDeleteButton">Hapus Buku</button>
               <button data-testid="bookItemEditButton">Edit Buku</button>
             </div>
@@ -90,13 +123,49 @@
             <p data-testid="bookItemAuthor">Penulis: Penulis Buku 2</p>
             <p data-testid="bookItemYear">Tahun: 2030</p>
             <div>
-              <button data-testid="bookItemIsCompleteButton">Selesai dibaca</button>
+              <button data-testid="bookItemIsCompleteButton">
+                Selesai dibaca
+              </button>
               <button data-testid="bookItemDeleteButton">Hapus Buku</button>
               <button data-testid="bookItemEditButton">Edit Buku</button>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- Modal untuk edit -->
+      <div id="editModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Edit Buku</h2>
+          <form id="editForm">
+            <div>
+              <label for="editFormTitle">Judul</label>
+              <input id="editFormTitle" type="text" required />
+            </div>
+            <div>
+              <label for="editFormAuthor">Penulis</label>
+              <input id="editFormAuthor" type="text" required />
+            </div>
+            <div>
+              <label for="editFormYear">Tahun</label>
+              <input id="editFormYear" type="number" required />
+            </div>
+            <div>
+              <label for="editFormIsComplete">Selesai dibaca</label>
+              <input id="editFormIsComplete" type="checkbox" />
+            </div>
+            <button type="submit">Simpan</button>
+            <button type="button" class="cancel-btn">Batal</button>
+          </form>
+        </div>
+      </div>
+      <footer>
+        <h2>
+          <a href="https://github.com/gelaws-hub" target="_blank">Tugas Akhir membuat Bookshelf App Dicoding</a>
+        </h2>
+        <p>&copy; 2024 Ibnu Fadhil</p>
+      </footer>
     </main>
   </body>
 </html>
